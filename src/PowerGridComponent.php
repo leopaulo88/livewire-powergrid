@@ -19,8 +19,7 @@ use PowerComponents\LivewirePowerGrid\Traits\{BatchableExport,
     Filter,
     Listeners,
     PersistData,
-    WithSorting
-};
+    WithSorting};
 
 class PowerGridComponent extends Component
 {
@@ -426,7 +425,7 @@ class PowerGridComponent extends Component
     {
         return match ($this->softDeletes) {
             'withTrashed' => $results->withTrashed(),
-            'onlyTrashed' => $results->trashed(),
+            'onlyTrashed' => $results->onlyTrashed(),
             default       => $results
         };
     }
@@ -443,7 +442,6 @@ class PowerGridComponent extends Component
             'pg:multiSelect-' . $this->tableName  => 'multiSelectChanged',
             'pg:toggleColumn-' . $this->tableName => 'toggleColumn',
             'pg:eventRefresh-' . $this->tableName => '$refresh',
-            'pg:softDeletes-' . $this->tableName  => 'softDeletes',
         ];
     }
 }
