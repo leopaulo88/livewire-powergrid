@@ -37,6 +37,7 @@ class TestDatabase
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->softDeletes();
             $table->timestamps();
         });
 
@@ -53,6 +54,7 @@ class TestDatabase
             $table->boolean('active')->default(true);
             $table->datetime('produced_at');
             $table->string('chef_name')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

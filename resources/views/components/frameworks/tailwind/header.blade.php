@@ -12,6 +12,7 @@
                     </div>
                 @endif
                 @includeIf(powerGridThemeRoot().'.header.toggle-columns')
+                @includeIf(powerGridThemeRoot().'.header.soft-deletes')
             </div>
             @include(powerGridThemeRoot().'.header.loading')
         </div>

@@ -2,7 +2,7 @@
 
 namespace PowerComponents\LivewirePowerGrid\Tests\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\{Model, SoftDeletes};
 use Illuminate\Support\Carbon;
 
 /**
@@ -13,6 +13,8 @@ use Illuminate\Support\Carbon;
  */
 class Category extends Model
 {
+    use SoftDeletes;
+
     protected $table = 'categories';
 
     protected $fillable = [
