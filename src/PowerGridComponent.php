@@ -426,7 +426,7 @@ class PowerGridComponent extends Component
     {
         return match ($this->softDeletes) {
             'withTrashed' => $results->withTrashed(),
-            'onlyTrashed' => $results->trashed(),
+            'onlyTrashed' => $results->onlyTrashed(),
             default       => $results
         };
     }
